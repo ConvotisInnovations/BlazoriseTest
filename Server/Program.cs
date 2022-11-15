@@ -46,14 +46,6 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Authorization
-app.UseAuthentication();
-app.UseAuthorization();
-
-// Localization
-var localizeOptions = new RequestLocalizationOptions().AddSupportedCultures("en-US", "de-DE").AddSupportedUICultures("en-US", "de-DE");
-app.UseRequestLocalization(localizeOptions);
-
 app.MapControllers();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
