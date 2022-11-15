@@ -1,0 +1,31 @@
+﻿@page "/pageB"
+
+<HeaderNavigationContent>
+    <HeaderNavigationItem IsActive="true">Page B</HeaderNavigationItem>
+</HeaderNavigationContent>
+
+<HeaderMenuContent>
+    <Select TValue="int" SelectedValue="@CurrentElementA" SelectedValueChanged="@OnSelectedElementAChanged">
+        <SelectItem Value="0">Value A</SelectItem>
+        <SelectItem Value="1">Value B</SelectItem>
+        <SelectItem Value="2">Value C</SelectItem>
+    </Select>
+    
+    <TextEdit Text="@SearchString" TextChanged="@OnSearchStringChanged"/>
+    
+    <Button Class="py-1" Color="Color.Danger" Style="white-space: nowrap" Outline> <!-- Toggle Button -->
+        <Span Display="Display.Inline.None.OnDesktop">
+            <Span class="fa-stack">
+                <Icon Name="IconName.User" Style="left:-4px; top: 2px;" Class="fa-stack-1x "/>
+                <Icon Name="IconName.Exclamation" Style="left: 11px;" Class="fa-stack-1x "/>
+            </Span>
+        </Span>
+        <Span Display="Display.None.Inline.OnDesktop">
+            <Span TextWeight="TextWeight.Bold" Style="font-size: 1.2rem">
+                0
+            </Span> Missing
+        </Span>
+    </Button>
+    
+    <AddButton>Add Element</AddButton>
+</HeaderMenuContent>

@@ -1,0 +1,19 @@
+﻿<Div Class="w-100">
+    <Div Class="d-flex flex-row align-items-center m-3">
+        <Div Class="d-flex align-items-center justify-content-start col-lg-6 col-md-12">
+            <Div Class="d-flex align-items-center me-3">
+                <Button Size="Size.Large" Class="shadow-none">
+                    <Icon TextColor="TextColor.Dark" Name="@("fa-bars")"/>
+                </Button>
+            </Div>
+
+            <Breadcrumb Class="m-0">
+                @HeaderNavigationState.Content
+            </Breadcrumb>
+        </Div>
+
+        <Div Class="d-flex align-items-center justify-content-end col-lg-6 col-md-12">
+            @HeaderMenuState.Content
+        </Div>
+    </Div>
+</Div>

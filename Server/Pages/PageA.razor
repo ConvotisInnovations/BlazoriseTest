@@ -1,0 +1,23 @@
+﻿@page "/pageA"
+
+<HeaderNavigationContent>
+    <HeaderNavigationItem IsActive="true">Page A</HeaderNavigationItem>
+</HeaderNavigationContent>
+
+<HeaderMenuContent>
+    <Select TValue="int" SelectedValue="@CurrentElementA" SelectedValueChanged="@OnSelectedElementAChanged">
+        <SelectItem Value="0">Value A</SelectItem>
+        <SelectItem Value="1">Value B</SelectItem>
+        <SelectItem Value="2">Value C</SelectItem>
+    </Select>
+
+    <Select TValue="int" SelectedValue="@CurrentElementB" SelectedValueChanged="@OnSelectedElementBChanged">
+        <SelectItem Value="0">Value A</SelectItem>
+        <SelectItem Value="1">Value B</SelectItem>
+        <SelectItem Value="2">Value C</SelectItem>
+    </Select>
+
+    <DatePicker TValue="DateTime" Date="@CurrentDate" DateChanged="@OnSelectedDateChanged"/>
+
+    <AddButton>Add Element</AddButton>
+</HeaderMenuContent>
